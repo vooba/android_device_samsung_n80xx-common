@@ -41,7 +41,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.exynos4 \
     libsecril-client \
-    GalaxyNoteTabSettings \
     TVOutDummy
     
 # IR packages
