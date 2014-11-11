@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
--include device/samsung/smdk4412-common/common.mk
 DEVICE_PACKAGE_OVERLAYS += device/samsung/n80xx-common/overlay-common
 
 PRODUCT_AAPT_CONFIG := xlarge mdpi hdpi
@@ -37,9 +36,14 @@ RECOVERY_FSTAB_VERSION := 2
 PRODUCT_COPY_FILES += \
     device/samsung/n80xx-common/configs/audio_policy.conf:system/etc/audio_policy.conf
 
+# Camera
+PRODUCT_COPY_FILES += \
+    device/samsung/n80xx-common/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Packages
 PRODUCT_PACKAGES += \
     camera.smdk4x12 \
+    libhwjpeg \
     libsecril-client \
     TVOutDummy
     
@@ -58,5 +62,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_CHARACTERISTICS := tablet
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
+$(call inherit-product, device/samsung/smdk4412-common/common.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/n80xx/n80xx-vendor.mk)
