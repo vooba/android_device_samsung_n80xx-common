@@ -22,10 +22,7 @@
 <resources>
     <!-- Allow the menu hard key to be disabled in LockScreen on some devices -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
-
-    <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
-
+    
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -34,7 +31,4 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">5</integer>
-
-    <!-- Boolean to enable stylus gestures -->
-    <bool name="config_stylusGestures">true</bool>
 </resources>
