@@ -29,6 +29,7 @@ BOARD_USES_PROPRIETARY_LIBCAMERA := true
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
+BOARD_RIL_CLASS := ../../../hardware/samsung/ril
 
 # Filesystem
 BOARD_NAND_PAGE_SIZE := 2048
