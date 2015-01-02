@@ -40,6 +40,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/n80xx-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+    
 # Packages
 PRODUCT_PACKAGES += \
     camera.smdk4x12 \
