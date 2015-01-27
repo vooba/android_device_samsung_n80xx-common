@@ -40,6 +40,6 @@
     <integer name="config_torchBrightness">1</integer>
 
     <!-- Defines the sysfs path to the torch led to be used as a flashlight. Usable with config_useCameraInterface=true -->
-    <string name="config_flashDevice">/sys/class/camera/rear/rear_flash</string>
+    <string name="config_flashDevice">/sys/class/camera/flash/rear_flash</string>
 </resources>
 
