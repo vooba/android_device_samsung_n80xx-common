@@ -48,8 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     camera.smdk4x12 \
     libhwjpeg \
-    libsecril-client \
-    TVOutDummy
+    libsecril-client
     
 # IR packages
 PRODUCT_PACKAGES += \
