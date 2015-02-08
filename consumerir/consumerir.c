@@ -56,7 +56,7 @@ static int consumerir_transmit(struct consumerir_device *dev,
     buffer[strlen - 1] = 0;
 
     write(fd, buffer, strlen - 1);
-
+    ALOGI("Consumer ir transmitting");
     return 0;
 }
 
@@ -110,7 +110,16 @@ static int consumerir_open(const hw_module_t* module, const char* name,
 
     *device = (hw_device_t*) dev;
     fd = open("/sys/class/sec/sec_ir/ir_send", O_RDWR);
-    return 0;
+    if(fd == -1)
+    {
+      ALOGE("Unable to open sysfs consumer ir");
+      return -EINVAL;
+    }
+    else
+    {
+	ALOGI("Consumer ir hal loaded");
+	return 0;
+    }
 }
 
 static struct hw_module_methods_t consumerir_module_methods = {
