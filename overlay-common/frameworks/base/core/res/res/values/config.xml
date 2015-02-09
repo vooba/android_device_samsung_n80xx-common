@@ -76,4 +76,7 @@
 
     <!-- Defines the sysfs path to the torch led to be used as a flashlight. Usable with config_useCameraInterface=true -->
     <string name="config_flashDevice">/sys/class/camera/flash/rear_flash</string>
+    
+     <!-- Boolean to enable Stylus gestures -->
+    <bool name="config_stylusGestures">true</bool>
 </resources>
