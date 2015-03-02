@@ -44,6 +44,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
     
+    
+# USB-OTG
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true
+
 # Packages
 PRODUCT_PACKAGES += \
     camera.smdk4x12 \
