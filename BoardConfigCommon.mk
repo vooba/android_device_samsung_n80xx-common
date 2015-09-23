@@ -41,6 +41,11 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12821987328
 BOARD_FLASH_BLOCK_SIZE := 2048
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  WITH_DEXPREOPT := true
+endif
+
 # Recovery
 # inherit from the proprietary version
 -include vendor/samsung/n80xx-common/BoardConfigVendor.mk
