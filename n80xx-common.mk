@@ -54,7 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # I/O Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=cfq
+    sys.io.scheduler=bfq
 
 # Packages
 PRODUCT_PACKAGES += \
