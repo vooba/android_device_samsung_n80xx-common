@@ -46,15 +46,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags=--no-watch-dog
-
-# USB-OTG
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-swap=false
 
 # I/O Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=cfq
+
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport
 
 # Packages
 PRODUCT_PACKAGES += \
