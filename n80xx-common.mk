@@ -62,7 +62,11 @@ PRODUCT_PACKAGES += \
     camera.smdk4x12 \
     libhwjpeg \
     libsecril-client
-    
+
+# shim libs for gpsd
+PRODUCT_PACKAGES += \
+    libn80xx
+
 # IR packages
 PRODUCT_PACKAGES += \
     consumerir.exynos4
