@@ -53,6 +53,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=cfq
 
+# RIL
+PRODUCT_PACKAGES += \
+	libsamsung_symbols \
+	ril-wrapper
+
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport

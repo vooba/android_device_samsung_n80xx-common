@@ -22,6 +22,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/n80xx-common/include
 
 # Exynos4x12 Tablet
 COMMON_GLOBAL_CFLAGS += -DEXYNOS4X12_TABLET
+COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Camera
 BOARD_USES_PROPRIETARY_LIBCAMERA := true
@@ -29,6 +30,9 @@ BOARD_USES_PROPRIETARY_LIBCAMERA := true
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
+
+#Kernel
+BOARD_RIL_CLASS := ../../../device/samsung/n80xx-common/ril
 
 # Filesystem
 BOARD_NAND_PAGE_SIZE := 4096
@@ -53,6 +57,6 @@ endif
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/n80xx-common/selinux
+   device/samsung/n80xx-common/selinux
 
 
