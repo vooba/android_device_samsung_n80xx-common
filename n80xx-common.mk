@@ -24,9 +24,10 @@ TARGET_SCREEN_WIDTH := 1280
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/n80xx-common/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
-    device/samsung/n80xx-common/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc \
     device/samsung/n80xx-common/fstab.smdk4x12:root/fstab.smdk4x12
+#   device/samsung/n80xx-common/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc \
+#   device/samsung/n80xx-common/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
+ 
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/n80xx-common/fstab.smdk4x12
@@ -34,8 +35,8 @@ RECOVERY_FSTAB_VERSION := 2
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/n80xx-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/samsung/n80xx-common/configs/tiny_hw.xml:system/etc/sound/n80xx
+#    device/samsung/n80xx-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
         
 # Camera
 PRODUCT_COPY_FILES += \
@@ -53,20 +54,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=cfq
 
-# RIL
-PRODUCT_PACKAGES += \
-	libsamsung_symbols \
-	ril-wrapper
-
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
 # Packages
 PRODUCT_PACKAGES += \
     camera.smdk4x12 \
     libhwjpeg \
-    libsecril-client
+    SamsungServiceMode \
 
 # shim libs for gpsd
 PRODUCT_PACKAGES += \
