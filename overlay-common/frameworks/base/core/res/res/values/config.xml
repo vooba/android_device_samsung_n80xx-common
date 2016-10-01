@@ -63,6 +63,6 @@
      <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">20</integer>
 
-     <!-- Boolean to enable Stylus gestures -->
-    <bool name="config_stylusGestures">true</bool>
+     <!-- Boolean to enable Stylus gestures
+    <bool name="config_stylusGestures">true</bool>  -->
 </resources>
